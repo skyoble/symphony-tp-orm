@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonController!{% endblock %}
+
+{% block body %}
+<table>
+    <tr>
+        <td>id</td>
+        <td>firstname</td>
+        <td>lastname</td>
+        <td>birthday</td>
+        <td>level</td>
+    </tr>
+    {% for person in persons %}
+    <tr>
+        <td>{{person.id}}</td>
+        <td>{{person.firstname}}</td>
+        <td>{{person.lastname}}</td>
+        <td>{{person.birthday}}</td>
+        <td>{{person.level}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
